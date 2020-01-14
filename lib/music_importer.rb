@@ -6,7 +6,7 @@ class MusicImporter
 
   def files
     @files= []
-    
+    Dir.glob("*.mp3") {|s| @files << s}
   end
 
   def import
