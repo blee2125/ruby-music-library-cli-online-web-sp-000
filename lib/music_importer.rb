@@ -5,7 +5,7 @@ class MusicImporter
   end
 
   def files
-    @files= Dir.glob("*.mp3") {|s| @files << s}
+    @files= Dir.glob("*.mp3").collect{|s| @files << s}
   end
 
   def import
